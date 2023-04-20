@@ -1,6 +1,6 @@
 import {FC} from "react";
 import BlogCard from "@/components/BlogCard";
-import {PostAPIResponse, readPostData} from "@/pages/api/post";
+import {readPostData} from "@/pages/api/post";
 import {InferGetStaticPropsType} from "next";
 
 
