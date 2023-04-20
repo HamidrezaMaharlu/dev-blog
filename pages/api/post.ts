@@ -8,7 +8,7 @@ export interface PostAPIResponse {
     data: POST[] | string
 }
 
-interface POST {
+export interface POST {
     title: string;
     meta: string;
     slug: string;
@@ -27,7 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<PostAP
     }
 }
 
-function readPostData():POST[] {
+export function readPostData():POST[] {
     const dirPath = path.join(process.cwd(), "posts")
     const directories = fs.readdirSync(dirPath)
     const posts = directories.map(dir => {
